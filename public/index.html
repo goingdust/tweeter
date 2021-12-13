@@ -6,9 +6,13 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/header.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,10 +24,32 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="logo">tweeter</span>
+      <div class="new-tweet">
+        <span>Write a new tweet</span>
+        <i class="fa-solid fa-angles-down"></i>
+      </div>
     </nav>
+    <header>
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2 class="name">Your Name</h2>
+      </div>
+    </header>
+  
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus ipsam porro unde repellat vero animi voluptate corporis autem iusto repellendus amet doloribus error, architecto ratione tenetur consequatur pariatur sit?
+      Odit corporis obcaecati explicabo expedita. Quis corrupti laboriosam eligendi quod quo libero consequuntur similique quibusdam. Ipsa atque molestias similique veniam fuga vel mollitia consequatur! Veniam suscipit earum voluptatem adipisci ullam?
+      Nihil obcaecati numquam dicta soluta laborum placeat ab, debitis facilis adipisci consequatur eveniet rem! Veniam facilis, veritatis omnis, expedita voluptatum ratione distinctio tempore porro vitae adipisci delectus placeat, inventore voluptate.
+      Atque, placeat numquam hic soluta voluptatum cum error similique illum? Voluptatibus aspernatur velit amet? Vitae cupiditate quaerat molestias dolor exercitationem nesciunt nihil magnam, sed laborum dignissimos, non, dicta delectus eum?
+      Deserunt consectetur libero ratione culpa non soluta voluptate voluptatem, vero reiciendis quia ullam autem placeat similique numquam architecto beatae. Consequatur iure alias sit at architecto, voluptatem reiciendis ut nulla magnam?</p>
+      <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel in laborum autem architecto commodi, exercitationem et possimus pariatur qui. Atque deserunt fugiat ut, vel nisi consequuntur ipsam voluptate minus repellat!</h2>
+    </main>
   </body>
 </html>

@@ -1,0 +1,15 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #35cf7098;
+  background-image: url("../images/clean-gray-paper.png");
+  transform: translateY(-20px);
+}
+
+h2.name {
+  margin: 0;
+}
