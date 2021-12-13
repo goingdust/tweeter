@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -25,7 +26,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <div class="new-tweet">
+      <div class="nav-new-tweet">
         <span>Write a new tweet</span>
         <i class="fa-solid fa-angles-down"></i>
       </div>
@@ -43,13 +44,18 @@
 
     <!-- Page-specific (main) content here -->
     <main>
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus ipsam porro unde repellat vero animi voluptate corporis autem iusto repellendus amet doloribus error, architecto ratione tenetur consequatur pariatur sit?
-      Odit corporis obcaecati explicabo expedita. Quis corrupti laboriosam eligendi quod quo libero consequuntur similique quibusdam. Ipsa atque molestias similique veniam fuga vel mollitia consequatur! Veniam suscipit earum voluptatem adipisci ullam?
-      Nihil obcaecati numquam dicta soluta laborum placeat ab, debitis facilis adipisci consequatur eveniet rem! Veniam facilis, veritatis omnis, expedita voluptatum ratione distinctio tempore porro vitae adipisci delectus placeat, inventore voluptate.
-      Atque, placeat numquam hic soluta voluptatum cum error similique illum? Voluptatibus aspernatur velit amet? Vitae cupiditate quaerat molestias dolor exercitationem nesciunt nihil magnam, sed laborum dignissimos, non, dicta delectus eum?
-      Deserunt consectetur libero ratione culpa non soluta voluptate voluptatem, vero reiciendis quia ullam autem placeat similique numquam architecto beatae. Consequatur iure alias sit at architecto, voluptatem reiciendis ut nulla magnam?</p>
-      <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel in laborum autem architecto commodi, exercitationem et possimus pariatur qui. Atque deserunt fugiat ut, vel nisi consequuntur ipsam voluptate minus repellat!</h2>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+          <div class="tweet-button">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      
     </main>
   </body>
 </html>

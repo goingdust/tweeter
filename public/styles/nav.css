@@ -14,7 +14,7 @@ span.logo {
   font-family: 'Bungee', sans-serif;
 }
 
-.new-tweet {
+.nav-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;

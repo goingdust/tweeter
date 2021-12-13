@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+textarea {
+  align-self: stretch;
+  border: none;
+  outline: none;
+  color: #545149;
+  background-color: #f4f1ec;
+  border-bottom: solid 4px;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  padding: 0.3em 0.5em;
+}
+
+output {
+  margin-right: 0.4em;
+  font-family: 'Bungee', sans-serif;
+}
+
+.tweet-button {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
