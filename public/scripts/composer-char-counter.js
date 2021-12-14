@@ -12,7 +12,7 @@ $(document).ready(function() {
     const counter = $(this.closest('form')).find('output.counter')[0];
     const key = event.key;
 
-    if (characters > -1 && key === 'Backspace') {
+    if (key === 'Backspace') {
       countChars(characters, counter, key);
     }
   });
@@ -28,8 +28,10 @@ const countChars = (characters, counter, key) => {
     } else {
       counter.innerHTML -= -1;
     }
-  } else {
+  } else if (characters >= 0) {
     counter.style.color = '#545149';
     counter.innerHTML = characters;
+  } else if (characters < 0) {
+    counter.innerHTML = 0;
   }
 };
