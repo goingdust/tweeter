@@ -31,23 +31,33 @@ body {
 main {
   width: 90%;
   margin-top: 100px;
- }
+}
 
 article.tweet {
   margin: 2em 0;
   border: solid 4px;
- }
+}
  
 article.tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 1em;
- }
+}
+
+ article.tweet header div {
+   display: flex;
+   align-items: center;
+}
+
+ article.tweet header div span {
+   margin-left: 0.5em;
+}
 
 article.tweet p {
   margin: 2em;
- }
+}
 
 article.tweet footer {
   display: flex;
@@ -55,8 +65,14 @@ article.tweet footer {
   margin: 1em;
   border-top: solid 4px;
   padding-top: 1em;
- }
+}
+
+article.tweet footer div {
+  display: flex;
+  justify-content: space-between;
+}
 
 i.fas {
   color: #35cf7098;
+  margin: 0 0.1em;
 }
