@@ -12,7 +12,7 @@ $(document).ready(function() {
     const counter = $(this.closest('form')).find('output.counter')[0];
     const key = event.key;
 
-    if (characters > -1 && key === 'Backspace' || key === 'Delete') {
+    if (characters > -1 && key === 'Backspace') {
       countChars(characters, counter, key);
     }
   });
