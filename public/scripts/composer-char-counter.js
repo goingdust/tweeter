@@ -21,7 +21,7 @@ $(document).ready(function() {
 const countChars = (characters, counter, key) => {
   if (characters > 140 && characters <= 141) {
     counter.innerHTML = -1;
-    counter.style.color = 'rgb(255, 60, 0)';
+    $(counter).addClass('counter-red');
   } else if (characters > 141) {
     if (key === 'keypress') {
       counter.innerHTML -= 1;
@@ -29,7 +29,7 @@ const countChars = (characters, counter, key) => {
       counter.innerHTML -= -1;
     }
   } else if (characters >= 0) {
-    counter.style.color = '#545149';
+    $(counter).removeClass('counter-red');
     counter.innerHTML = characters;
   } else if (characters < 0) {
     counter.innerHTML = 0;

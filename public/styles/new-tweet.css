@@ -38,3 +38,7 @@ output {
   justify-content: space-between;
   margin: 1em 0;
 }
+
+.counter-red {
+  color: rgb(255, 60, 0);
+}
