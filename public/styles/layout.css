@@ -28,7 +28,35 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
+main {
   width: 90%;
   margin-top: -20px;
  }
+
+article.tweet {
+  margin: 2em 0;
+  border: solid 4px;
+ }
+ 
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+ }
+
+article.tweet p {
+  margin: 2em;
+ }
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+  border-top: solid 4px;
+  padding-top: 1em;
+ }
+
+i.fas {
+  color: #35cf7098;
+}

@@ -1,4 +1,4 @@
-header {
+.body-header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -10,6 +10,6 @@ header {
   transform: translateY(-20px);
 }
 
-h2.name {
+header h2 {
   margin: 0;
 }

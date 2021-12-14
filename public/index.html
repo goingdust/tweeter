@@ -20,27 +20,27 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <div class="nav-new-tweet">
-        <span>Write a new tweet</span>
+      <div>
+        <span><b>Write</b> a new tweet</span>
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
+    <header class="body-header">
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="/images/profile-hex.png" alt="profile pic"> 
       </div>
       <br>
       <div>
-          <h2 class="name">Dusty Luck</h2>
+          <h2>Dusty Luck</h2>
       </div>
     </header>
-  
 
     <!-- Page-specific (main) content here -->
     <main>
@@ -55,8 +55,26 @@
           </div>
         </form>
       </section>
-      
+      <section class="tweet-container">
+        <article class="tweet">
+          <header>
+            <div>
+              <i class="fas fa-id-card-alt"></i>
+              <span>Rose Dommu</span>
+            </div>
+            <span>@rosedommu</span>
+          </header>
+          <p>I wonder if Carrie wrote about the insurrection</p>
+          <footer>
+            <span>10 days ago</span>
+            <div>
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
-    <script src="scripts/composer-char-counter.js"></script>
   </body>
 </html>
