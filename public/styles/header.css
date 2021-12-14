@@ -7,7 +7,7 @@
   align-items: center;
   background-color: #35cf7098;
   background-image: url("../images/clean-gray-paper.png");
-  transform: translateY(-20px);
+  transform: translateY(100px);
 }
 
 header h2 {

@@ -21,7 +21,7 @@ $(document).ready(function() {
 const countChars = (characters, counter, key) => {
   if (characters > 140 && characters <= 141) {
     counter.innerHTML = -1;
-    counter.style.color = 'red';
+    counter.style.color = 'rgb(255, 60, 0)';
   } else if (characters > 141) {
     if (key === 'keypress') {
       counter.innerHTML -= 1;
