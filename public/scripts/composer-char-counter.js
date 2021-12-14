@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  console.log('hey der');
-  
   $('textarea').on('keypress', function(event) {
     const characters = $(this).val().length + 1;
     const counter = $(this.closest('form')).find('output.counter')[0];
