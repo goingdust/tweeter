@@ -61,6 +61,19 @@ $(document).ready(function() {
     }
   };
 
+  const createErrorMsgElement = function(message) {
+    const $form = $($($(document).find('body')).find('section.new-tweet')).find('form');
+    const $errorDiv = $('<div>').addClass('error-div');
+    const $errorIcon = $('<i>').addClass('fas fa-exclamation-triangle');
+    const $errorMsg = $('<span>').text(message);
+    const $labelDiv = $('<div>').addClass('label-div');
+    const $label = $($form).find('label');
+
+    $form.prepend($labelDiv);
+    $labelDiv.append($label, $errorDiv);
+    $errorDiv.append($errorIcon, $errorMsg);
+  };
+
   $('form').on('submit', function(event) {
     event.preventDefault();
     const $data = $(this).serialize();
@@ -68,10 +81,14 @@ $(document).ready(function() {
     const $tweetContent = $textarea.val();
     
     if ($tweetContent.replaceAll(' ', '') === '' || $tweetContent === null || $tweetContent.length === 0) {
-      return alert('You can\'t post an empty tweet!');
+      $('div.error-div').remove();
+      return createErrorMsgElement('You can\'t post an empty tweet!');
     } else if ($tweetContent.length > 140) {
-      return alert('Too many characters! Slow down there, bud!');
+      $('div.error-div').remove();
+      return createErrorMsgElement(`${$tweetContent.length} characters?? keep it under 140 plz`);
     }
+
+    $('div.error-div').remove();
     
     $textarea.val('');
 
