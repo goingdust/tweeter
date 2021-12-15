@@ -56,12 +56,19 @@ $(document).ready(function() {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    const tweetContent = $(this).serialize();
+    const data = $(this).serialize();
+    const tweetContent = $($(this).children('textarea')).val();
+    
+    if (tweetContent.replaceAll(' ', '') === '' || tweetContent === null || tweetContent.length === 0) {
+      return alert('You can\'t post an empty tweet!');
+    } else if (tweetContent.length > 140) {
+      return alert('Too many characters! Slow down there, bud!');
+    }
     
     $.ajax({
       url: '/tweets', 
       method: 'POST',
-      data: tweetContent
+      data
       })
       .done((results) => {
         console.log(results);
