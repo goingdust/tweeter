@@ -57,9 +57,14 @@ $(document).ready(function() {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    const data = $(this).serialize();
+    const tweetContent = $(this).serialize();
     
-    $.ajax('/tweets', { method: 'POST', data });
+    $.ajax('/tweets', { method: 'POST', data: tweetContent })
+      .done((results) => {
+        console.log(results);
+      })
+      .fail((error) => console.log(`Error: ${error.responseJSON.error}`))
+      .always(() => console.log('The form request was made!'));
   });
 
 });
