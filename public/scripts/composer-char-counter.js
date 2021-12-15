@@ -32,6 +32,7 @@ const countChars = (characters, counter, key) => {
     $(counter).removeClass('counter-red');
     counter.innerHTML = characters;
   } else if (characters < 0) {
+    $(counter).removeClass('counter-red');
     counter.innerHTML = 0;
   }
 };
