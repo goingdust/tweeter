@@ -6,13 +6,14 @@
 
 $(document).ready(function() {
 
-  const loadTweets = function() {
+  const loadTweets = function(tweetContent) {
+
     $.ajax({
       url: '/tweets',
       method: 'GET'
       })
       .done((tweets) => {
-        renderTweets(tweets);
+        renderTweets(tweets, tweetContent);
       })
       .fail((error) => console.log(`Error: ${error.responseJSON.error}`))
       .always(() => console.log('The tweet GET request was made!'));
@@ -46,11 +47,18 @@ $(document).ready(function() {
     return $newTweet;
   };
   
-  const renderTweets = function(tweets) {
+  const renderTweets = function(tweets, tweetContent) {
     const $tweetsContainer = $('section#tweets-container');
+    console.log(tweetContent);
     
     for (const tweet of tweets) {
-      $tweetsContainer.append(createTweetElement(tweet));
+
+      if (tweetContent !== undefined && tweetContent === tweet.content.text) {
+        $tweetsContainer.prepend(createTweetElement(tweet));
+      } else if (tweetContent === undefined) {
+        $tweetsContainer.prepend(createTweetElement(tweet));
+      }
+
     }
   };
 
@@ -70,8 +78,8 @@ $(document).ready(function() {
       method: 'POST',
       data
       })
-      .done((results) => {
-        console.log(results);
+      .done(() => {
+        loadTweets(tweetContent);
       })
       .fail((error) => console.log(`Error: ${error.responseJSON.error}`))
       .always(() => console.log('The tweet POST request was made!'));
