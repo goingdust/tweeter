@@ -28,11 +28,11 @@ $(document).ready(function() {
     const $header = $('<header>');
     const $headerDiv = $('<div>');
     const $profileAvatar = $('<img>').attr('src', `${tweet.user.avatars}`);
-    const $nameSpan = $('<span>').html(`${tweet.user.name}`);
-    const $handleSpan = $('<span>').html(`${tweet.user.handle}`);
-    const $content = $('<p>').html(`${tweet.content.text}`);
+    const $nameSpan = $('<span>').text(`${tweet.user.name}`);
+    const $handleSpan = $('<span>').text(`${tweet.user.handle}`);
+    const $content = $('<p>').text(`${tweet.content.text}`);
     const $footer = $('<footer>');
-    const $dateCreatedSpan = $('<span>').html(`${date}`);
+    const $dateCreatedSpan = $('<span>').text(`${date}`);
     const $footerDiv = $('<div>');
     const $flagIcon = $('<i>').addClass('fas fa-flag');
     const $retweetIcon = $('<i>').addClass('fas fa-retweet');
@@ -49,7 +49,6 @@ $(document).ready(function() {
   
   const renderTweets = function(tweets, tweetContent) {
     const $tweetsContainer = $('section#tweets-container');
-    console.log(tweetContent);
     
     for (const tweet of tweets) {
 
@@ -64,22 +63,25 @@ $(document).ready(function() {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    const data = $(this).serialize();
-    const tweetContent = $($(this).children('textarea')).val();
+    const $data = $(this).serialize();
+    const $textarea = $(this).children('textarea');
+    const $tweetContent = $textarea.val();
     
-    if (tweetContent.replaceAll(' ', '') === '' || tweetContent === null || tweetContent.length === 0) {
+    if ($tweetContent.replaceAll(' ', '') === '' || $tweetContent === null || $tweetContent.length === 0) {
       return alert('You can\'t post an empty tweet!');
-    } else if (tweetContent.length > 140) {
+    } else if ($tweetContent.length > 140) {
       return alert('Too many characters! Slow down there, bud!');
     }
     
+    $textarea.val('');
+
     $.ajax({
       url: '/tweets', 
       method: 'POST',
-      data
+      data: $data
       })
       .done(() => {
-        loadTweets(tweetContent);
+        loadTweets($tweetContent);
       })
       .fail((error) => console.log(`Error: ${error.responseJSON.error}`))
       .always(() => console.log('The tweet POST request was made!'));
