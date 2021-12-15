@@ -76,3 +76,11 @@ i.fas {
   color: #35cf7098;
   margin: 0 0.1em;
 }
+
+article:hover {
+  box-shadow: 5px 5px 10px #7563317c;
+}
+
+i.fas:hover {
+  color: rgb(255, 60, 0);
+}
