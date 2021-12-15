@@ -63,11 +63,11 @@ $(document).ready(function() {
 
   const createErrorMsgElement = function(message) {
     const $form = $($($(document).find('body')).find('section.new-tweet')).find('form');
+    const $label = $($form).find('label');
+    const $labelDiv = $('<div>').addClass('label-div');
     const $errorDiv = $('<div>').addClass('error-div');
     const $errorIcon = $('<i>').addClass('fas fa-exclamation-triangle');
     const $errorMsg = $('<span>').text(message);
-    const $labelDiv = $('<div>').addClass('label-div');
-    const $label = $($form).find('label');
 
     $form.prepend($labelDiv);
     $labelDiv.append($label, $errorDiv);
@@ -85,7 +85,7 @@ $(document).ready(function() {
       return createErrorMsgElement('You can\'t post an empty tweet!');
     } else if ($tweetContent.length > 140) {
       $('div.error-div').remove();
-      return createErrorMsgElement(`${$tweetContent.length} characters?? keep it under 140 plz`);
+      return createErrorMsgElement(`${$tweetContent.length} characters?? keep it under 140 🙏`);
     }
 
     $('div.error-div').remove();
