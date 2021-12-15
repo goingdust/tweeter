@@ -55,6 +55,14 @@ $(document).ready(function() {
     this.style.color = '#35cf7098';
   });
 
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    
+    console.log($(this).serialize());
+    
+    $.ajax('/tweets', { method: 'POST', data });
+  });
+
 });
 
 const createTweetElement = function(tweet) {
