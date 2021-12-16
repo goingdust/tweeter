@@ -57,6 +57,7 @@ form footer {
   display: flex;
   align-items: center;
   color:rgb(255, 60, 0);
+  font-weight: 600;
 }
 
 .error-div i {
