@@ -77,8 +77,8 @@ $(document).ready(function() {
   $('form').on('submit', function(event) {
     event.preventDefault();
     const $data = $(this).serialize();
-    const $textarea = $(this).children('textarea');
-    const $tweetContent = $textarea.val();
+    const $textArea = $(this).children('textarea');
+    const $tweetContent = $textArea.val();
     
     if ($tweetContent.replaceAll(' ', '') === '' || $tweetContent === null || $tweetContent.length === 0) {
       $('div.error-div').remove();
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
     $('div.error-div').remove();
     
-    $textarea.val('');
+    $textArea.val('');
 
     $.ajax({
       url: '/tweets', 

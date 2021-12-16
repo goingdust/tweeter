@@ -6,7 +6,7 @@ header.body-header {
   justify-content: flex-end;
   align-items: center;
   background-color: #35cf7098;
-  background-image: url("../images/diagonal-striped-brick.png");
+  background-image: url("../images/fresh-snow.png");
 }
 
 header.body-header div img {
@@ -14,7 +14,7 @@ header.body-header div img {
 }
 
 header.body-header div h2 {
-  color: #f4f1ec;
+  color: #545149;
   font-weight: 400;
   margin: 0;
   margin-bottom: 1em;
