@@ -25,7 +25,7 @@ form button {
   outline: none;
   border-radius: 0.2em;
   color: #FFFFFF;
-  background-color: #4b3481d5;
+  background-color: #4b3481;
   font-family: 'Bungee', sans-serif;
   padding: 0.3em 0.5em;
 }
@@ -55,9 +55,10 @@ form footer {
 
 .error-div {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   color:rgb(255, 60, 0);
   font-weight: 600;
+  text-align: right;
 }
 
 .error-div i {

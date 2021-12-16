@@ -1,0 +1,35 @@
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    html {
+      font-size: 20px;
+    }
+
+    nav {
+      background-color: transparent;
+      color: #4b3481;
+      height: 4em;
+    }
+
+    span.logo {
+      padding: 0 0.7em;
+    }
+
+    nav div span {
+      font-size: 1.1rem;
+      color: #545149;
+      margin-top: 1.2em;
+    }
+
+    header.body-header div img {
+      width: 12em;
+    }
+
+    section.new-tweet button {
+      background-color: #4b3481;
+    }
+}

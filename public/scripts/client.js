@@ -66,12 +66,11 @@ $(document).ready(function() {
     const $label = $($form).find('label');
     const $labelDiv = $('<div>').addClass('label-div');
     const $errorDiv = $('<div>').addClass('error-div');
-    const $errorIcon = $('<i>').addClass('fas fa-exclamation-triangle');
-    const $errorMsg = $('<span>').text(message);
+    const $errorMsg = $('<span>').html(`<i class="fas fa-exclamation-triangle"></i> ${message}`);
 
     $form.prepend($labelDiv);
     $labelDiv.append($label, $errorDiv);
-    $errorDiv.append($errorIcon, $errorMsg);
+    $errorDiv.append($errorMsg);
   };
 
   $('form').on('submit', function(event) {
