@@ -45,6 +45,11 @@ article.tweet header {
   margin: 1em;
 }
 
+article.tweet header span {
+  font-weight: 600;
+  color: #4b3481a2;
+}
+
  article.tweet header div {
    display: flex;
    align-items: center;
@@ -52,6 +57,7 @@ article.tweet header {
 
  article.tweet header div span {
    margin-left: 0.5em;
+   color: #545149;
 }
 
 article.tweet p {
