@@ -1,7 +1,6 @@
 $(document).ready(function() {
   
   const $body = $(document).find('body');
-  const $main = $body.find('main');
   const $newTweetSection = $body.find('section.new-tweet');
   const $formToggleButton = $($body.find('nav')).find('div');
   const $scrollUpButton = $body.find('button.scroll-up');
@@ -17,7 +16,6 @@ $(document).ready(function() {
   });
 
   $(document).on('scroll', function() {
-    $main.addClass('main-adjust');
     $scrollUpButton.show();
     $formToggleButton.addClass('hide');
 
@@ -28,7 +26,6 @@ $(document).ready(function() {
         $formToggleButton.addClass('hide');
       }
       $scrollUpButton.hide();
-      $main.removeClass('main-adjust');
     }
   });
 

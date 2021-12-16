@@ -32,10 +32,6 @@ main {
   width: 90%;
 }
 
-.main-adjust {
-  margin-top: -70px;
-}
-
 article.tweet {
   margin: 2em 0;
   border: solid 4px;
