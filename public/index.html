@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="/styles/scroll-button.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,7 +30,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <div class="bounce">
+      <div>
         <span><b>Write</b> a new tweet</span>
         <i class="fa-solid fa-angles-down"></i>
       </div>
@@ -43,7 +44,11 @@
           <h2>Dusty Luck</h2>
       </div>
     </header>
-
+    <div class="scroll-button">
+      <button>
+        <i class="fas fa-angle-double-up"></i>
+      </button>
+    </div>
     <!-- Page-specific (main) content here -->
     <main>
       <section class="new-tweet">
