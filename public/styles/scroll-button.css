@@ -1,17 +1,17 @@
-div.scroll-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-  background-color: transparent;
-  z-index: 1;
-  position: sticky;
-  top: 90.5%;
-}
-
-div.scroll-button button {
+button.scroll-up {
   padding: 0.9em 1.05em;
   margin: 0 0.79em;
   border-radius: 50%;
   background-color: rgb(255, 60, 0);
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  z-index: 1;
+  position: sticky;
+  top: 90.5%;
+  left: 95%;
+}
+
+button.scroll-up:hover {
+  cursor: pointer;
 }

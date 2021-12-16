@@ -3,11 +3,10 @@ $(document).ready(function() {
   const $body = $(document).find('body');
   const $newTweetSection = $body.find('section.new-tweet');
   const $formToggleButton = $($body.find('nav')).find('div');
-  const $scrollUpDiv = $body.find('div.scroll-button');
-  const $scrollUpButton = $($scrollUpDiv).find('button');
+  const $scrollUpButton = $body.find('button.scroll-up');
 
   $newTweetSection.hide();
-  $scrollUpDiv.hide();
+  $scrollUpButton.hide();
 
   $formToggleButton.on('click', function() {
     $newTweetSection.toggle();
@@ -15,12 +14,12 @@ $(document).ready(function() {
 
   $(document).on('scroll', function() {
     $('main').addClass('main-adjust');
-    $scrollUpDiv.show();
+    $scrollUpButton.show();
     $formToggleButton.hide();
 
     if ($(this).scrollTop() == 0) {
       $formToggleButton.show();
-      $scrollUpDiv.hide();
+      $scrollUpButton.hide();
       $('main').removeClass('main-adjust');
     }
   });

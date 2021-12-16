@@ -20,9 +20,10 @@ textarea {
   margin-top: 1em;
 }
 
-button {
+form button {
   border: none;
   outline: none;
+  border-radius: 0.2em;
   color: #FFFFFF;
   background-color: #4056A1;
   font-family: 'Bungee', sans-serif;
@@ -62,6 +63,7 @@ form footer {
   margin: 0 0.3em;
 }
 
-button:hover {
+form button:hover {
   cursor: pointer;
+  box-shadow: 5px 5px 10px #7563317c;
 }
