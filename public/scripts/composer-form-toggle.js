@@ -28,7 +28,7 @@ $(document).ready(function() {
   $scrollUpButton.on('click', function() {
     $('html, body').animate({
       scrollTop: 0
-    }, 500);
+    }, 300);
     $newTweetSection.show();
   });
 

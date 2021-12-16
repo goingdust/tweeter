@@ -1,15 +1,22 @@
-.body-header {
-  height: 400px;
+header.body-header {
+  height: 520px;
   width: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: #35cf7098;
   background-image: url("../images/clean-gray-paper.png");
-  transform: translateY(100px);
 }
 
-header h2 {
+header.body-header div img {
+  filter: drop-shadow(1px 1px 2px rgba(84, 81, 73, 0.212));
+}
+
+header.body-header div h2 {
+  color: #f4f1ec;
+  font-weight: 400;
   margin: 0;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 2px rgba(84, 81, 73, 0.212);
 }
