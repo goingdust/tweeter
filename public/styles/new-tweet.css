@@ -34,7 +34,7 @@ output {
   font-family: 'Bungee', sans-serif;
 }
 
-.tweet-button {
+form footer {
   align-self: stretch;
   display: flex;
   justify-content: space-between;
@@ -60,4 +60,8 @@ output {
 
 .error-div i {
   margin: 0 0.3em;
+}
+
+button:hover {
+  cursor: pointer;
 }
