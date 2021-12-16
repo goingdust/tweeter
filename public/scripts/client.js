@@ -90,6 +90,7 @@ $(document).ready(function() {
     $('div.error-div').remove();
     
     $textArea.val('');
+    $($(this).find('output.counter')).text('140');
 
     $.ajax({
       url: '/tweets', 

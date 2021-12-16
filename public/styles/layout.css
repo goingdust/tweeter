@@ -88,4 +88,5 @@ article:hover {
 
 article.tweet footer div i.fas:hover {
   color: rgb(255, 60, 0);
+  cursor: pointer;
 }
