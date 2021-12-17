@@ -30,6 +30,10 @@ nav div span {
 
 nav div i {
   color: rgb(255, 60, 0);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: ease;
 }
 
 .hide {
@@ -38,13 +42,6 @@ nav div i {
 
 nav div:hover {
   cursor: pointer;
-}
-
-nav div:hover i {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: bounce;
-  animation-timing-function: ease;
 }
 
 @keyframes bounce {
