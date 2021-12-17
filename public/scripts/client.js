@@ -52,6 +52,7 @@ $(document).ready(function() {
     
     for (const tweet of tweets) {
 
+      // if there's new tweet content, only post the tweet that is new
       if (tweetContent !== undefined && tweetContent === tweet.content.text) {
         $tweetsContainer.prepend(createTweetElement(tweet));
       } else if (tweetContent === undefined) {
@@ -79,6 +80,7 @@ $(document).ready(function() {
     const $textArea = $(this).children('textarea');
     const $tweetContent = $textArea.val();
     
+    // tweet character-limit error messages
     if ($tweetContent.replaceAll(' ', '') === '' || $tweetContent === null || $tweetContent.length === 0) {
       $('div.error-div').remove();
       return createErrorMsgElement('You can\'t post an empty tweet!');
@@ -87,8 +89,10 @@ $(document).ready(function() {
       return createErrorMsgElement(`${$tweetContent.length} characters?? keep it under 140 🙏`);
     }
 
+    // remove error if tweet passes conditionals
     $('div.error-div').remove();
     
+    // clear textarea and reset counter
     $textArea.val('');
     $($(this).find('output.counter')).text('140');
 
