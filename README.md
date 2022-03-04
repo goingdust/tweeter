@@ -1,13 +1,19 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
-
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Tweeter is a simple, single-page Twitter clone powered by AJAX.
 
 ## Screenshots
 
+### Desktop
+
 !["Screenshot of desktop window version"](https://github.com/goingdust/tweeter/blob/main/docs/desktop-version.png)
+
+### Tablet
+
 !["Screenshot of tablet version's tweet-box, scrolled down slightly](https://github.com/goingdust/tweeter/blob/main/docs/tablet-version-scroll-button.png)
+
+### Mobile
+
 !["Screenshot of mobile version"](https://github.com/goingdust/tweeter/blob/main/docs/mobile-version.png)
 
 ## Getting Started
@@ -22,3 +28,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- MD5
+- Chance
+- body-parser
